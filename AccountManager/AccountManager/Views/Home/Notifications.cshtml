@@ -1,0 +1,10 @@
+﻿@model System.Collections.Generic.List<AccountManager.Models.ReadModel.Public.Notification>
+
+<div class='notification'>
+    <ul>
+        @foreach(var item in Model)
+        {
+            <li>@item.Message</li>
+        }
+    </ul>
+</div>

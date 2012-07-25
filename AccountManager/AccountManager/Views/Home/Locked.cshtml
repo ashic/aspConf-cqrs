@@ -1,0 +1,9 @@
+﻿@model Guid
+@{
+    ViewBag.Title = "Locked";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Your account has been locked due to suspicious activity. Please contact an administrator to sort this out. You will not be able to make any debits until your account is unlocked.</h2>
+
+@Html.ActionLink("Click here to return to your page.", "Public", new { AccountId = Model })

@@ -1,0 +1,13 @@
+﻿@model AccountManager.Models.Commands.RegisterAccountCommand
+
+@{
+    ViewBag.Title = "Register New Account";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Register New Account</h2>
+
+@using(Html.BeginForm("Register", "Home", FormMethod.Post)){
+    @Html.EditorFor(x=>x)
+    <input type="submit" value="submit"/>
+}

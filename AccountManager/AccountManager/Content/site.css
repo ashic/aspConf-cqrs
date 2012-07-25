@@ -1,0 +1,25 @@
+﻿
+div.header{
+   text-align:right;
+}
+
+div.header h1{
+   border-bottom:2px solid silver;
+}
+
+div.home-nav ul{
+    list-style:none;
+}
+
+div.home-nav ul li{
+    float:left; 
+    margin:2em;
+}
+
+div.home-nav ul li a {
+    padding:1em 2em;
+    background:#8ef;
+    font-weight:bold;
+    text-decoration:none;
+    border:2px solid silver;
+}

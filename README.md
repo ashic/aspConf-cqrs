@@ -1,4 +1,16 @@
 aspConf-cqrs
 ============
 
-Code repo for my aspconf 2012 talk on CQRS &amp; Event Sourcing [ http://channel9.msdn.com/Events/aspConf/aspConf/CQRS-with-ASP-NET-MVC-A-Year-On]
+Code repo for my aspconf 2012 talk on CQRS &amp; Event Sourcing 
+[ http://channel9.msdn.com/Events/aspConf/aspConf/CQRS-with-ASP-NET-MVC-A-Year-On]
+
+Steps to Run
+------------
+
+Create a new Sql Server database (the demo was created for Sql 2008) called SqlEventStore. 
+Run the ES.sql script from the root folder for the new database. 
+The only place you need to change the connection string (if required) is in the web.config of the AccountManager project.
+Run the app.
+
+If you wish to try out the testing "framework", run the Formatter project.
+Also, check out the chanel 9 video mentioned above for a brief walk through.

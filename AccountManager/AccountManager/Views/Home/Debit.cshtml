@@ -1,0 +1,19 @@
+﻿@model AccountManager.Models.ReadModel.Public.AccountBalance
+
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Hello @Model.Name</h2>
+Your current balance is @Model.Balance
+
+Please specify the amount you wish to debit:<br/>
+@using(Html.BeginForm("Debit", "Home", new{ AccountId = Model.AccountId}))
+{
+    @Html.Editor("Amount")
+    <input type="submit" value="submit"/>
+}
+
+
+@Html.Action("Notifications", new{accountId = Model.AccountId})

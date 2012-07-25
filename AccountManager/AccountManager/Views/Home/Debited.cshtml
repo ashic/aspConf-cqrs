@@ -1,0 +1,9 @@
+﻿@model Guid
+@{
+    ViewBag.Title = "Debited";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Your request has been accepted and will be processed.</h2>
+
+@Html.ActionLink("Click here to return to your page.", "Public", new { AccountId = Model })

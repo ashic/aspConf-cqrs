@@ -1,0 +1,16 @@
+﻿@model List<AccountManager.Models.ReadModel.Admin.AccountInfo>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="home-nav">
+  <ul>
+      @foreach(var m in Model)
+      {
+          <li>@Html.ActionLink(m.Name, "Public", new {AccountId = m.AccountId})</li>
+      }
+      <li>@Html.ActionLink("Admin", "Admin")</li>
+  </ul>  
+</div>
+

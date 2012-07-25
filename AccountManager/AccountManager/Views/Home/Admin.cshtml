@@ -1,0 +1,36 @@
+﻿@model List<AccountManager.Models.ReadModel.Admin.AccountInfo>
+@{
+    ViewBag.Title = "Admin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Existing Accounts</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var m in Model)
+        {
+            <tr>
+                <td>@m.Name</td>
+                <td>@m.Email</td>
+                <td>
+                    @if (m.IsLocked)
+                    {
+                        using (Html.BeginForm("Unlock", "Home", new { AccountId = m.AccountId }, FormMethod.Post))
+                        {
+                        <input type="submit" value="unlock" />
+                        }
+                    }</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<hr />
+@Html.ActionLink("Register New", "Register")
